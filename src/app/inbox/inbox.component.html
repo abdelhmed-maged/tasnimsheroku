@@ -1,0 +1,49 @@
+<div class="nativeSlarkCard">
+
+  <div class="alert alert-info m-3  p-3" role="alert" *ngIf="emailDeleted">
+    Email Deleted!!
+  </div>
+  <div class="nativeSlarkCard container p-2">
+    <h5>Inbox</h5>
+    <div class="table table-responsive d-flex">
+      <table class="p-2 w-100">
+        <thead>
+        <tr class="thead-dark">
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>View</th>
+          <th>Delete</th>
+        </tr>
+        </thead>
+        <div class="text-center d-block m-auto" *ngIf="keys.length == 0">
+          <span class="">No Records Found</span>
+        </div>
+        <tbody *ngIf="keys.length != 0">
+        <!--<ng-container *ngFor="let singleobject of singleObject ">-->
+        <tr *ngFor="let key of keys">
+          <td>{{singleObject[key].name}}</td>
+          <td>{{singleObject[key].email}}</td>
+          <td>{{singleObject[key].phone}}</td>
+          <!--<td>{{singleObject[key].name}}</td>-->
+          <!--<td>{{singleObject[key].name}}</td>-->
+          <td><a style="cursor: pointer" (click)="viewEmail(singleObject[key].message); openModal(template)">View </a></td>
+          <td><a style="cursor: pointer" (click)="deleteEmail(key)">Delete </a></td>
+        </tr>
+        <!--</ng-container>-->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Message Body:</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body ">
+    <p class="p-2 card">{{renderThisMessage}}</p>
+  </div>
+</ng-template>

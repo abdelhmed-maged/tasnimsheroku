@@ -1,0 +1,66 @@
+
+<!---->
+<!--<div class="login">-->
+  <!--<div class="loginModal">-->
+<!--<h6>Login</h6>-->
+    <!--<input class="m-1 p-1" type="text" placeholder="enter your email">-->
+    <!--<input class="m-1 p-1" type="password" placeholder="enter your password">-->
+    <!--<button class="slarkMaterial-GradiantBtn m-1">Login</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<div class="wrapper">
+  <!-- Sidebar Holder -->
+  <nav id="sidebar" class="active" [ngClass]="{'active': toggleSideBar, 'inactive' : !toggleSideBar }">
+    <div class="sidebar-header">
+      <h3>Tasnim Technology</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+      <li>
+        <a routerLink="/dashboard">Dashboard</a>
+      </li>
+      <li>
+        <a routerLink="dashboard/products">products</a>
+      </li>
+      <li>
+        <a routerLink="dashboard/inbox">inbox</a>
+      </li>
+      <li>
+        <a routerLink="">Preview Home</a>
+      </li>
+    </ul>
+
+
+  </nav>
+
+  <!-- Page Content Holder -->
+  <div id="content" class="w-100">
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" id="sidebarCollapse"  [ngClass]="{'active': toggleSideBar, 'inactive' : !toggleSideBar }" (click)="toggleSideBar = !toggleSideBar" class="navbar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Page</a></li>
+            <li><a href="#">Page</a></li>
+            <li><a href="#">Page</a></li>
+            <li><a href="#">Page</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

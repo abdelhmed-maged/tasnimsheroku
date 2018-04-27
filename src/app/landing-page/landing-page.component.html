@@ -1,0 +1,281 @@
+
+<app-landing-page-header></app-landing-page-header>
+
+  <!-- carousel here -->
+  <carousel>
+    <slide>
+      <img src="../assets/img/2.jpg" alt="Second slide" style="display: block; width: 100%; height: 100vh">
+      <div class="carousel-caption ">
+        <h3 class="atf"><span>Welcome to</span> Tasnim Technology</h3>
+        <p class="atf">we here offer high scalable software solution for your company</p>
+      </div>
+    </slide>
+  </carousel>
+  <div class="p-4" id="aboutus">
+    <div class="m-4 text-center"> <p style="color: #2d9dce">WELCOME TO TASNIM TECHNOLOGY KSA</p></div>
+    <div class="m-2 text-center"><h1>We Offer you intelligent solutions to fulfill your Needs with a very Professional team in your service</h1></div>
+
+    <div class="justify-content-center align-items-center d-flex row p-4">
+
+      <div class=" service col-md-3 col-sm-12">
+        <i class="fa fa-sitemap icon-service hovicon effect-9 sub-a" aria-hidden="true"></i>
+        <h3><span>Management </span>& Control Solution</h3>
+        <p>Visitor Management System (VMS) & Real Time Tracking System</p>
+      </div>
+
+      <div class=" service col-md-3 col-sm-12">
+        <i class="fa fa-money icon-service hovicon effect-9 sub-a" aria-hidden="true"></i>
+        <h3><span>Payment </span>Solution</h3>
+        <p>For Product Distribution &  For fuel Distribution</p>
+      </div>
+
+      <div class="service col-md-3 col-sm-12">
+        <i class="fa fa-cogs icon-service hovicon effect-9 sub-a" aria-hidden="true"></i>
+        <h3><span>IT </span>Solutions</h3>
+        <p>Load Balance & ERP </p>
+      </div>
+
+
+      <div class="service col-md-3 col-sm-12">
+        <i class=" icon-service hovicon effect-9 sub-a" aria-hidden="true"><img src="../assets/img/ar-glasses.png" style="padding-bottom: 15px;"></i>
+        <h3><span>Virtual  </span> Reality</h3>
+        <p>For Real Estate market & For Education field & For Medicine field</p>
+      </div>
+
+
+    </div>
+
+    <!--<div class="justify-content-center d-flex align-items-center">-->
+      <!--<button type="button" class=" btn-custome-service btn-lg px-4 m-4">Learn More</button>-->
+    <!--</div>-->
+
+  </div>
+  <!-- about us section -->
+  <!-- why work with us -->
+
+
+  <div class="p-4" id="whyus">
+    <div class="m-4 text-center"> <p style="color: #fff">BENIFITS WORKING WITH US</p></div>
+    <div class="m-2 text-center"><h1>We love what we do and we do it with passion!</h1></div>
+    <div>
+	<span class="text-left p1 p-1 px-4 m-2" style="color: #fff"><i class="fa fa-circle bullet" aria-hidden="true"></i>our mission cantered in maintaining the highest ethical
+		standards and the best practices in KSApt</span>
+    </div>
+    <div  id="benfits">
+      <ul>
+        <li class="common-BodyText">Tasnim Technology had been involved in the cabling market from day one; we are considered one of the market leader suppliers for it</li>
+        <li class="common-BodyText">We bring the IT Technology to the end consumer wrapped with best efficiency and highest quality in the world market. </li>
+        <li class="common-BodyText">
+          Tasnim Technology has a deeply experience in managing logistics operations; such as dealing with forwarders, customs, inventory management, in addition to any Legal Issues in KSA.
+        </li>
+        <li class="common-BodyText">We offer solutions for Broadcasters  and  A/V  specialists, with guidance in how to monitor  thier signals . We deal  with  the  best companies in choosing our products;  have own expertise,  and  we  have  experts  whom  are  willing  to  assist  you.</li>
+        <li class="common-BodyText">
+          Tasnim is had a long experience in  Pay- TV Business   and we have a specializes Engineer in the development, design, maintenance and operate the Network , equipment and client for IPTV.
+        </li>
+        <li class="common-BodyText">We are proud to have active files and open channels with all governmental, university and most private hospitals, and we are seeking to develop ourselves further.</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+  <!-- why work with us -->
+  <!-- our products -->
+
+  <div class=" p-4 m-2">
+    <div class="m-4 text-center"> <p style="color: #2d9dce">WHAT WE HAVE DONE</p></div>
+    <div class="m-4 text-center"><h1>Product & Services</h1></div>
+    <!-- isotopes -->
+    <div class="filter-button-group button-group js-radio-button-group  d-flex center-buttons">
+      <div class="filter"><button class="button d-flex " (click)="allActive()" [ngClass]="{'active' : AllActive}" >All</button></div>
+      <div class="filter"><button class="button d-flex" (click)="itActive()" [ngClass]="{'active' : ItActive}">IT Solutions</button></div>
+      <!--<div class="filter"><button class="button d-flex">Virtual Reality</button></div>-->
+      <div class="filter"><button class="button d-flex" (click)="paymentActive()" [ngClass]="{'active' : PaymentActive}"> Payment Solution</button></div>
+      <!--<div class="filter"><button class="button d-flex">Management & Control Solution</button></div>-->
+    </div>
+    <div class="d-flex flex-row pt-5">
+      <div class="element-item it col-md-3 col-sm-12 "  *ngIf="it">
+        <div class="card">
+          <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Cyber Force</h4>
+            <h6 class="card-subtitle mb-2 text-muted">IT solutions</h6>
+            <button type="button" class="btn btn-custome-service" ><i class="fa fa-eye" aria-hidden="true"></i>
+              view</button>
+          </div>
+        </div>
+      </div>
+      <div class="element-item payment col-md-3 col-sm-12 "  *ngIf="payment" >
+        <div class="card">
+          <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">For Product Distribution</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Payment Solution</h6>
+            <button type="button" class="btn btn-custome-service" ><i class="fa fa-eye" aria-hidden="true"></i>
+              view</button>
+          </div>
+        </div>
+      </div>
+      <div class="element-item payment col-md-3 col-sm-12 "  *ngIf="payment">
+        <div class="card">
+          <img class="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title"> For fuel Distribution</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Payment Solution</h6>
+            <button type="button" class="btn btn-custome-service"><i class="fa fa-eye" aria-hidden="true"></i>
+              view</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- our products -->
+  <!-- sub -->
+  <div class="subscribe p-4  mx-md-4">
+    <div class="row p-4">
+      <div class="col-md-6 sub">
+        <p class="text-left"><span>Get our latest news and announcment</span><br>
+          We'll notify you and promise never to spam.</p>
+      </div>
+      <div class="subinput col-md-6">
+        <input type="text"  placeholder=".">
+        <label >Enter your email here...</label>
+        <button type="submit" class="btn-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- partnrs -->
+  <div class="partners p-4">
+    <div class="p-4 partner-container">
+      <div class="m-0 text-center"> <p style="color: #2d9dce">OUR HAPPY CUSTOMERS</p></div>
+      <div class="m-2 text-center"><h1>Our Partners</h1></div>
+
+      <carousel>
+        <slide>
+          <img src="assets/img/partner-1.jpg" alt="Second slide" style="display: block; width: 100%; height: 520px">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="partner-name">KEMP</h1>
+            <p>
+           KEMP Technologies is the industry leader in advanced Layer 2 – 7 Application Delivery Controllers (ADC) and application-centric load balancing.
+            Since 2000, KEMP has been a consistent leader in innovation with a number of industry firsts, including high performance ADC appliance virtualization, application-centric SDN and NFV integration, innovative pricing and licensing models and true platform ubiquity that can scale to support enterprises of every size and workload requirement.
+            KEMP headquarters In New York City, Also has regional hubs in Limerick, Ireland as well as Munich, Germany and Singapore.
+            </p>
+          </div>
+        </slide>
+        <slide>
+          <img src="assets/img/partner-2.jpg" alt="Second slide" style="display: block; width: 100%; height: 520px">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="partner-name">GEO RFID</h1>
+            <p style="color:#fff">From our Toronto, Canada head office and branch office in NYC, GAO has implemented 1,000 RFID and IoT systems in North America and globally, including US and Canadian cities such as New York, Los Angeles, Chicago, Houston, Las Vegas, Vancouver, Montreal and countries like UAE and Saudia Arabia.
+              GAO offers a large selection of active, passive and semi-passive RFID readers, tags, and systems complying with industry standards ISO, GS1 EPC Global Gen 1 and Gen 2, NFC. Features of our readers and tags include rugged, high-temperature, on-metal, animal, medical, hazardous, beacon, wristband, tamper proof, tire, nail. They are available in fixed, desktop, handheld, or mobile and are compatible with Android, iOS, GPS, 1D/2D barcode, and Bluetooth.
+            </p>
+          </div>
+        </slide>
+      </carousel>
+
+    </div>
+  </div>
+  <!-- partners -->
+  <!--3  sections -->
+  <div class="p-4" >
+    <div class="  row p-4">
+      <div class=" col-md-6 col-sm-12 news">
+        <div class="m-2 my-4 text-left"><h1>News & Media</h1></div>
+        <div class="news-container">
+          <div class="card p-2 m-4">
+            <span class="badge-2 p-2 "><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+            <div class="card-block  py-2">
+              <h4 class="card-title ml-4">2016 Product Overview</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Barnfind 2016 Product Overview</h6>
+              <a href="#" class="card-link">Learn More</a>
+            </div>
+          </div>
+          <div class="card p-3 m-4">
+            <span class="badge-2 p-2 "><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
+            <div class="card-block py-2">
+              <h4 class="card-title ml-4">New product from DekTec</h4>
+              <h6 class="card-subtitle mb-2 text-muted">StreamXpert 2.0 Has Been Released</h6>
+              <a href="#" class="card-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="  col-md-6 col-sm-12 press">
+        <div class="m-2 text-left  my-4"><h1>Press Releases</h1></div>
+        <div class="news-container">
+          <div class="card p-2 m-4">
+            <span class="badge-2 p-2 "><i class="fa fa-bell" aria-hidden="true"></i></span>
+            <div class="card-block py-2">
+              <h4 class="card-title ml-4">Cabsat 2016</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Latest Technologies from Barnfind. </h6>
+              <a href="#" class="card-link">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 3 sections -->
+  <!-- request a quote -->
+  <div class=" p-4 m-2">
+    <div class="mt-4 text-center"> <p style="color: #2d9dce" class="m-0 p-0">REQUEST A QUOTE</p></div>
+    <div class="m-0 text-center"><h1>Inquiries</h1></div>
+    <div class="mb-4 text-center"><h6>Want to say hello? Want to know more about us? Give us a call or drop us an email and we will get back to you as soon as we can.</h6></div>
+    <form [formGroup]="contactSales"
+          (ngSubmit)=" onSubmit()">
+      <div class="m-4 p-2 row">
+        <div class="row col-12">
+          <div class="quote col-md-4">
+            <input type="text"
+                   placeholder="."
+                   name="name"
+                   formControlName="name">
+            <label >Enter your name here...</label>
+          </div>
+          <div class="quote col-md-4">
+            <input type="text"
+                   placeholder="."
+                   name="email"
+                   formControlName="email"
+                   #email>
+            <label >Enter your email here...</label>
+            <!--<small *ngIf="!email.valid">*required filed</small>-->
+          </div>
+          <div class="quote col-md-4">
+            <input type="number"
+                   placeholder="."
+                   name="phone"
+                   formControlName="phone">
+            <label >Enter your Phone here...</label>
+          </div>
+        </div>
+        <div class="row col-12">
+          <div class="quote col-md-12">
+          <textarea type="text"
+                    placeholder="."
+                    ngModel
+                    name="message"
+                    formControlName="message"
+          ></textarea>
+            <label >Enter your message here...</label>
+          </div>
+        </div>
+        <div class="row col-12">
+          <p class="text-center" style="color: green" *ngIf="successMessage">Thank you for contacting us... Your message will be reviewed </p>
+          <div class="quote col-md-12">
+            <button type="button"
+                    class=" btn-custome-service btn-lg"
+                    type="submit"
+                    *ngIf="!contactSales.invalid">Submit  <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- request a quote -->
+
+ <app-landing-page-footer></app-landing-page-footer>
+
+<!-- modal  -->
+

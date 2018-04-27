@@ -1,0 +1,34 @@
+//global variables
+$tasnimTitle:                                                                      #3c4350;
+$tasnimPrimaryColor:                                                               #78c0de;
+$tasnimGradiant:          linear-gradient(to right, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+$reverseTasnimGradiant:   linear-gradient(to right, #49a5bf 0%, #75bdd1 41%,  #93cede 100%);
+$tasnimLightBoxShadow:    0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
+$tasnimHeavyBoxShadow:                                       rgba(0, 0, 0, 0.3) 0 0 20px 0;
+.slarkMaterial{
+
+  &-GradiantBtn{
+    color: #fff;
+    cursor: pointer;
+    background: $tasnimPrimaryColor;
+    background: -webkit-gradient(linear, left top, right top, from(#93cede), color-stop(41%, #75bdd1), to(#49a5bf));
+    background: linear-gradient(to right, #93cede 0%, #75bdd1 41%, #49a5bf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
+    border: none;
+    -webkit-box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
+    box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
+  }
+  &-SoidBtn{
+    color: #fff;
+    cursor: pointer;
+    background-color: $tasnimPrimaryColor;
+    border: none;
+    -webkit-box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
+    box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
+  }
+}
+.nativeSlarkCard{
+  background-color: #fff;
+  box-shadow: 0 2px 2px rgba(10, 16, 20, 0.24), 0 0 2px rgba(10, 16, 20, 0.12);
+  border-radius: 8px;
+}
