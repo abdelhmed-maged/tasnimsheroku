@@ -13,5 +13,5 @@ export const environment = {
     projectId: 'tasnim-695fa',
     storageBucket: 'tasnim-695fa.appspot.com',
     messagingSenderId: '656339891417'
-  }
+  },
 };

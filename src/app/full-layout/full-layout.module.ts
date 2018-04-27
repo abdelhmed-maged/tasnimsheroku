@@ -5,6 +5,7 @@ import { InboxComponent } from '../inbox/inbox.component';
 import { FullLayoutComponent } from './full-layout.component';
 import { ProductsComponent } from '../products/products.component';
 import { FullLayoutRoutingModule } from './full-layout.routing.module';
+import { LoginGuardGuard } from '../login-guard.guard';
 
 @NgModule({
   imports: [

@@ -1,0 +1,16 @@
+@import "../../assets/tasnim";
+.wrapperOne{
+  height: 100vh;
+  width: 100%;
+  background: $tasnimGradiant;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slarkBadge{
+  border-radius: 8px;
+  padding: 15px 28px;
+  border: 1px solid rgba(0,0,0,.2);
+  background-color: #f3f3f3;
+}

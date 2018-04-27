@@ -22,13 +22,16 @@
         <a routerLink="/dashboard">Dashboard</a>
       </li>
       <li>
-        <a routerLink="dashboard/products">products</a>
+        <a [routerLink]="['../products']">products</a>
       </li>
       <li>
-        <a routerLink="dashboard/inbox">inbox</a>
+        <a routerLink="../inbox">inbox</a>
       </li>
       <li>
         <a routerLink="">Preview Home</a>
+      </li>
+      <li>
+        <a (click)="signOut()">Log out</a>
       </li>
     </ul>
 

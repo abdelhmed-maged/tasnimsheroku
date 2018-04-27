@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { FullLayoutComponent } from './full-layout/full-layout.component';
+// import { FullLayoutComponent } from './full-layout/full-layout.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
-import { LangingPageService } from './landing-page/langing-page.service';
+// import { LangingPageService } from './landing-page/langing-page.service';
 
-import { FullLayoutModule } from "./full-layout/full-layout.module";
+import { FullLayoutModule } from './full-layout/full-layout.module';
 import { CarouselModule, BsDropdownModule, ModalModule  } from 'ngx-bootstrap';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Http} from '@angular/http';
@@ -23,6 +23,17 @@ import { LandingPageHeaderComponent } from './landing-page-header/landing-page-h
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { CyberForceComponent } from './products/cyber-force/cyber-force.component';
+import { TasnimProductControlComponent } from './products/tasnim-product-control/tasnim-product-control.component';
+import { AllProductComponent } from './products/all-product/all-product.component';
+import { ProductAndServiceComponent } from './products/product-and-service/product-and-service.component';
+import { ContactUsFormComponent } from './contact-us-form/contact-us-form.component';
+import { ContactUsPageComponent } from './contact-us-page/contact-us-page.component';
+import { AfService } from './shared/af-service.service';
+import {AngularFireAuth, AngularFireAuthModule} from 'angularfire2/auth';
+import {AngularFirestore, AngularFirestoreModule} from 'angularfire2/firestore';
+import { LoginGuardGuard } from './login-guard.guard';
 
 @NgModule({
   declarations: [
@@ -32,10 +43,20 @@ import { environment } from '../environments/environment';
     AboutUsComponent,
     LandingPageFooterComponent,
     LandingPageHeaderComponent,
+    LoginPageComponent,
+    CyberForceComponent,
+    TasnimProductControlComponent,
+    AllProductComponent,
+    ProductAndServiceComponent,
+    ContactUsFormComponent,
+    ContactUsPageComponent,
+
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFirestoreModule,
     FullLayoutModule,
     HttpClientModule,
     BrowserModule,
@@ -48,7 +69,7 @@ import { environment } from '../environments/environment';
     FormsModule,
 
   ],
-  providers: [  { provide: APP_BASE_HREF, useValue : '/' }],
+  providers: [  { provide: APP_BASE_HREF, useValue : '/' }, AfService , AngularFireAuth, LoginGuardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
