@@ -15,7 +15,6 @@ user: User;
   }
   signOut() {
     this.afservice.logout();
-    window.location.reload();
   }
   ngOnInit() {
 this.afservice.user$.subscribe( user => this.user = user);

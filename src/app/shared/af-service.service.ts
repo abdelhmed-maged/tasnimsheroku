@@ -34,8 +34,7 @@ updateUser(user) {
     displayName: user.displayName,
     photoURL: user.photoURL,
     roles: {
-      visitores: true,
-      admin: false,
+      admin: true,
     }
   };
 return userRef.set(data);

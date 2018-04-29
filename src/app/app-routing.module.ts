@@ -9,6 +9,7 @@ import { TasnimProductControlComponent } from './products/tasnim-product-control
 import { AllProductComponent } from './products/all-product/all-product.component';
 import { ContactUsPageComponent } from './contact-us-page/contact-us-page.component';
 import { LoginGuardGuard } from './login-guard.guard';
+import { PartnersComponent } from './partners/partners.component';
 
 const routes: Routes = [
 //   { path: '', component: LandingPageComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'tasnim-control', component: TasnimProductControlComponent },
   { path: 'bussniss-line', component: AllProductComponent },
   { path: 'contact-us', component: ContactUsPageComponent },
+  { path: 'partners', component: PartnersComponent },
 
   {
     path: '', component: FullLayoutComponent, canActivate: [LoginGuardGuard],
@@ -43,6 +45,7 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: './full-layout/full-layout.module#FullLayoutModule',
+        canActivate: [LoginGuardGuard]
       }
     ]
   }

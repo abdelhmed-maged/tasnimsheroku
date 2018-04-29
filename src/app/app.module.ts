@@ -34,6 +34,8 @@ import { AfService } from './shared/af-service.service';
 import {AngularFireAuth, AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFirestore, AngularFirestoreModule} from 'angularfire2/firestore';
 import { LoginGuardGuard } from './login-guard.guard';
+import { PartnersComponent } from './partners/partners.component';
+// import { ProductService } from './products/product.service';
 
 @NgModule({
   declarations: [
@@ -50,10 +52,12 @@ import { LoginGuardGuard } from './login-guard.guard';
     ProductAndServiceComponent,
     ContactUsFormComponent,
     ContactUsPageComponent,
+    PartnersComponent
 
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),
+
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,

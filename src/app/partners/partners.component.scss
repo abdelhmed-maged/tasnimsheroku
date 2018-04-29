@@ -1,0 +1,33 @@
+@import "../about-us/about-us.component";
+@import "../../assets/tasnim";
+.tasnim-partner-container{
+  width: 24%;
+  min-height: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  float: left;
+  margin: 2px;
+  >.imgContainer{
+    width: 100%;
+    height: 150px;
+    padding: 28px;
+    overflow: hidden;
+    background-color: #fff;
+    >img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .tasnim-partner-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .tasnim-partner-container {
+    width: 100%;
+  }
+}

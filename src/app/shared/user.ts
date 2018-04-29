@@ -3,12 +3,9 @@ export interface User {
       email: string;
       displayName?: string;
       photoURL?: string;
-      roles?: {
-        admin?: boolean;
-        visitores?: boolean;
-      };
+      roles?: Roles;
 }
 
 export interface Roles {
-
+  admin: boolean;
 }
